@@ -6,17 +6,17 @@ const reviewSchema = new Schema(
       dog: { type: mongoose.Schema.Types.ObjectId, ref: 'Dog' },
       rating: { 
           type: Number,
-          required: true 
+          required: true,
+          min: 1,
+          max: 5
       },
       pros: { 
           type: String,
           required: true,
-          trim: true 
       },
       cons: { 
           type: String,
           required: true,
-          trim: true 
       },
       apartment: { type: mongoose.Schema.Types.ObjectId, ref: 'Apartment' }
     },
