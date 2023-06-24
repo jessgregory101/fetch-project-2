@@ -13,8 +13,8 @@ const userSchema = new Schema ({
         type: String,
         required: true,
     },
-    dogs: [{type: mongoose.Schema.TypeObjectId, ref: 'Dog'}],
-    favourites: [{type: mongoose.Schema.TypeObjectId, ref: 'Apartment'}]
+    dogs: [{type: mongoose.Schema.Types.ObjectId, ref: 'Dog'}],
+    favourites: [{type: mongoose.Schema.Types.ObjectId, ref: 'Apartment'}]
 });
 
 const User = mongoose.model('User', userSchema);
