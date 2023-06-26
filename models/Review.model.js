@@ -18,7 +18,7 @@ const reviewSchema = new Schema(
           type: String,
           required: true,
       },
-      apartment: { type: mongoose.Schema.Types.ObjectId, ref: 'Apartment' }
+      apartment: { type: Schema.Types.ObjectId, ref: 'Apartment' }
     },
     {
       timestamps: true
