@@ -6,6 +6,7 @@ const Dog = require("../models/Dog.model");
 
 const isLoggedIn = require("../middleware/isLoggedIn");
 
+
 // GET route to display all the user's dogs in "my kennel"
 
 router.get("/my-kennel", isLoggedIn, (req, res, next) => {
@@ -24,10 +25,28 @@ router.get("/my-kennel", isLoggedIn, (req, res, next) => {
 
 // GET route to display form to add dog to "my kennel"
 
+router.get("/add-dog", isLoggedIn, (req, res, next) => {
+  res.render("add-dog");
+});
 
 
 // POST route to submit a new dog
 
+router.post("/add-dog", isLoggedIn, (req, res, next) => {
+  const { name, breed, age, image, character } = req.body;
+  const owner = req.session.currentUser._id;
+
+  Dog.create({ name, breed, age, image, character, owner })
+    .then(dog => {
+      return User.findByIdAndUpdate(owner, { $push: { dogs: dog._id } });
+    })
+    .then(() => {
+      res.redirect("/my-kennel");
+    })
+    .catch(error => {
+      next(error);
+    });
+});
 
 
 module.exports = router;

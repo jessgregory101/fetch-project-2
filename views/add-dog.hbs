@@ -1,0 +1,33 @@
+<h1>Add a New Dog</h1>
+
+<form action="/add-dog" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="breed">Breed:</label>
+    <input type="text" id="breed" name="breed" required>
+
+    <label for="age">Age:</label>
+    <select id="age" name="age" required>
+        <option value="">Please choose an option</option>
+        <option value="puppy">Puppy</option>
+        <option value="teen">Teen</option>
+        <option value="mature">Mature</option>
+        <option value="retired">Retired</option>
+    </select>
+
+    <label for="image">Image URL:</label>
+    <input type="text" id="image" name="image" required>
+
+    <label for="character">Character:</label>
+    <div id="character">
+        <label><input type="checkbox" name="character" value="energetic"> Energetic</label>
+        <label><input type="checkbox" name="character" value="friendly"> Friendly</label>
+        <label><input type="checkbox" name="character" value="quiet"> Quiet</label>
+        <label><input type="checkbox" name="character" value="playful"> Playful</label>
+        <label><input type="checkbox" name="character" value="affectionate"> Affectionate</label>
+        <label><input type="checkbox" name="character" value="shy"> Shy</label>
+    </div>
+
+    <input type="submit" value="Add Dog">
+</form>
