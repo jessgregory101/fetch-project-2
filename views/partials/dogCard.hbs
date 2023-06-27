@@ -1,0 +1,16 @@
+<div class="dog-card">
+    <h2>{{this.name}}</h2>
+    <img src="{{this.image}}" alt="{{this.name}}">
+    <p>Breed: {{this.breed}}</p>
+    <p>Age: {{this.age}}</p>
+    <p>Character: 
+        {{#each this.character}}
+            {{this}},
+        {{/each}}
+    </p>
+    <a href="/edit-dog/{{this._id}}">Edit</a>
+    <form action="/delete-dog/{{this._id}}" method="POST">
+        <button type="submit">Delete</button>
+    </form>
+</div>
+
