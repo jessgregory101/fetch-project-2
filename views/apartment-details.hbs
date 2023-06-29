@@ -1,0 +1,16 @@
+<h2>{{this.name}}</h2>
+<div class="apartment-images">
+    <img src="{{apartment.heroImage}}" alt="{{apartment.name}}">
+    <img src="{{apartment.secondImage}}" alt="{{apartment.name}}">
+    <img src="{{apartment.thirdImage}}" alt="{{apartment.name}}">
+</div>
+<p>Price: {{apartment.price}}</p>
+<p>Features:
+    {{#each apartment.dogFeatures}}
+    {{this}}{{#unless @last}},{{/unless}}
+    {{/each}}
+</p>
+<p>{{apartment.averageRating}}</p>
+<p>{{apartment.description}}</p>
+
+<a href="/leave-review/{{apartment._id}}">Leave a review</a>
