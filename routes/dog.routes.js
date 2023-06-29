@@ -33,5 +33,17 @@ router.post("/edit-dog/:dogId", isLoggedIn, (req, res, next) => {
     });
 });
 
-module.exports = router;
+
 // POST route for deleting dog from "My Kennel"
+router.post('/delete-dog/:dogId', (req, res, next) => {
+
+  const { dogId } = req.params;
+ 
+  Dog.findByIdAndDelete(dogId)
+    .then(() => res.redirect('/my-kennel'))
+    .catch(error => next(error));
+});
+
+
+
+module.exports = router;
