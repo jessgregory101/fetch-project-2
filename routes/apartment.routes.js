@@ -5,10 +5,10 @@ const Apartment = require("../models/Apartment.model");
 
 // GET route to display all the apartments
 
-router.get("/apartment-listings", (req, res, next) => {  
+router.get("/apartments", (req, res, next) => {  
     Apartment.find()
       .then(apartments => {
-        res.render('apartment-listings', { apartments });
+        res.render('apartments', { apartments });
       })
       .catch(error => {
         next(error);
@@ -21,7 +21,7 @@ router.get("/apartment-details/:id", (req, res, next) => {
 
     const { id } = req.params;
 
-    Apartment.findbyId(id)
+    Apartment.findById(id)
       .then(apartment => {
         res.render('apartment-details', { apartment });
       })
