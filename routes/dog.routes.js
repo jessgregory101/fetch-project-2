@@ -1,16 +1,37 @@
-<<<<<<< HEAD
 const express = require("express");
 const router = express.Router();
 
+const Dog = require("../models/Dog.model"); // Import the Dog model
+const isLoggedIn = require("../middleware/isLoggedIn");
 
 
-/* GET display pet */
-router.get("/", (req, res,next) => {
-    res.render("index");
+
+// GET route to display the form to edit a specific dog
+router.get("/edit-dog/:dogId", isLoggedIn, (req, res, next) => {
+    const { dogId } = req.params;
+
+    Dog.findById(dogId)
+    .then(dogToEdit => {
+      res.render('edit-dog', { dog: dogToEdit });
+    })
+    .catch(error => next(error));
 });
 
 
-module.exports = router;
-=======
+// POST route to submit the form when dog is edited
+router.post("/edit-dog/:dogId", isLoggedIn, (req, res, next) => {
 
->>>>>>> e26c8d37e04708ef06a19d2f17fb69d8e9d9e04d
+  const { dogId } = req.params;
+  const { name, breed, age, image, character } = req.body;
+  
+  Dog.findByIdAndUpdate(dogId, { name, breed, age, image, character })
+    .then(() => {
+      res.redirect("/my-kennel");
+    })
+    .catch(error => {
+      next(error);
+    });
+});
+
+module.exports = router;
+// POST route for deleting dog from "My Kennel"
