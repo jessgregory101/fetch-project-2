@@ -1,7 +1,7 @@
-body {
+/* body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+} */
 
 a {
   color: #00b7ff;
@@ -9,4 +9,33 @@ a {
 
 h1 {
   color: 15px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* layout view */
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  border-bottom: 1px solid lightgray;
+}
+
+nav a {
+  color: black;
+  margin-right: 15px;
+  font-weight: 700;
+  font-size: 20px;
+  text-decoration: none;
 }
