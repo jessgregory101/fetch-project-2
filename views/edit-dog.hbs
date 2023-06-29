@@ -1,33 +1,35 @@
-<h1>Edit Your Dog: {{dog.name}}</h1>
+<h2>Edit {{dog.name}}'s Profile</h2>
 
 <form action="/edit-dog/{{dog._id}}" method="post">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="{{dog.name}}" required>
+  <label>Name:
+    <input type="text" name="name" value="{{dog.name}}" />
+  </label>
 
-    <label for="breed">Breed:</label>
-    <input type="text" id="breed" name="{{dog.breed}}" required>
+  <label>Breed:
+    <input type="text" name="breed" value="{{dog.breed}}" />
+  </label>
 
-    <label for="age">Age:</label>
-    <select id="age" name="{{dog.age}}" required>
-        <option value="">Please choose an option</option>
-        <option value="puppy">Puppy</option>
-        <option value="teen">Teen</option>
-        <option value="mature">Mature</option>
-        <option value="retired">Retired</option>
+  <label>Age:
+    <select name="age">
+      <option value="{{dog.age}}">{{dog.age}}</option>
+      <option value="Puppy">Puppy</option>
+      <option value="Teen">Teen</option>
+      <option value="Mature">Mature</option>
+      <option value="Retired">Retired</option>
     </select>
+  </label>
 
-    <label for="image">Image URL:</label>
-    <input type="text" id="image" name="{{dog.image}}" required>
+  <label>Image:
+    <input type="text" name="image" value="{{dog.image}}" />
+  </label>
 
-    <label for="character">Character:</label>
-    <div id="character">
-        <label><input type="checkbox" name="{{dog.character}}" value="energetic"> Energetic</label>
-        <label><input type="checkbox" name="{{dog.character}}" value="friendly"> Friendly</label>
-        <label><input type="checkbox" name="{{dog.character}}" value="quiet"> Quiet</label>
-        <label><input type="checkbox" name="{{dog.character}}" value="playful"> Playful</label>
-        <label><input type="checkbox" name="{{dog.character}}" value="affectionate"> Affectionate</label>
-        <label><input type="checkbox" name="{{dog.character}}" value="shy"> Shy</label>
-    </div>
+  <label>Character:</label>
+  <input type="checkbox" name="character" value="Energetic" {{#if dog.character.energetic}}checked{{/if}}> Energetic
+  <input type="checkbox" name="character" value="Eriendly" {{#if dog.character.friendly}}checked{{/if}}> Friendly
+  <input type="checkbox" name="character" value="Quiet" {{#if dog.character.quiet}}checked{{/if}}> Quiet
+  <input type="checkbox" name="character" value="Playful" {{#if dog.character.playful}}checked{{/if}}> Playful
+  <input type="checkbox" name="character" value="Affectionate" {{#if dog.character.affectionate}}checked{{/if}}> Affectionate
+  <input type="checkbox" name="character" value="Shy" {{#if dog.character.shy}}checked{{/if}}> Shy
 
-    <input type="submit" value="Save Changes">
+  <button type="submit">Save changes</button>
 </form>
