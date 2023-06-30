@@ -12,7 +12,7 @@ router.get("/edit-dog/:dogId", isLoggedIn, (req, res, next) => {
 
     Dog.findById(dogId)
     .then(dogToEdit => {
-      res.render('edit-dog', { dog: dogToEdit });
+      res.render('edit-dog', { dog: dogToEdit, isLoggedIn: req.session.isLoggedIn });
     })
     .catch(error => next(error));
 });
