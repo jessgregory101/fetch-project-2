@@ -16,7 +16,7 @@ router.get("/my-kennel", isLoggedIn, (req, res, next) => {
     User.findById(userId)
       .populate('dogs')
       .then(user => {
-        res.render('my-kennel', { dogs: user.dogs });
+        res.render('my-kennel', { dogs: user.dogs, isLoggedIn: req.session.isLoggedIn });
       })
       .catch(error => {
         next(error);
@@ -42,7 +42,7 @@ router.get("/my-kennel", isLoggedIn, (req, res, next) => {
 // GET route to display form to add dog to "my kennel"
 
 router.get("/add-dog", isLoggedIn, (req, res, next) => {
-  res.render("add-dog");
+  res.render("add-dog", { isLoggedIn: req.session.isLoggedIn });
 });
 
 
