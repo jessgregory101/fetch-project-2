@@ -1,1 +1,22 @@
-g
+<h1>Leave Review</h1>
+
+<form action="/leave-review/{{apartment._id}}" method="post">
+
+    <label for="dog">Select your pup:</label>
+    <select name="dog" id="dog">
+        {{#each dogs}}
+        <option value="{{_id}}">{{name}}</option>
+        {{/each}}
+    </select>
+
+    <label for="pros">What were the best parts of your stay?</label>
+    <input type="text" id="pros" name="pros" required>
+
+    <label for="cons">What could be improved?</label>
+    <input type="text" id="cons" name="cons" required>
+
+    <label for="rating">How would you rate your stay here?</label>
+    <input type="number" id="rating" name="rating" required min="1" max="5">
+
+    <input type="submit" value="Add Rating">
+</form>

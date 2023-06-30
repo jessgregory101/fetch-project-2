@@ -41,6 +41,9 @@ app.use("/", apartmentRoutes);
 const dogRoutes = require("./routes/dog.routes");
 app.use("/", dogRoutes);
 
+const reviewRoutes = require("./routes/review.routes");
+app.use("/", reviewRoutes);
+
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
 

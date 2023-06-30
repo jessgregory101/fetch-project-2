@@ -3,6 +3,7 @@ const router = express.Router();
 
 const User = require("../models/User.model");
 const Dog = require("../models/Dog.model");
+const Review = require("../models/Review.model");
 
 const isLoggedIn = require("../middleware/isLoggedIn");
 
@@ -20,7 +21,22 @@ router.get("/my-kennel", isLoggedIn, (req, res, next) => {
       .catch(error => {
         next(error);
       });
-  });
+});
+
+// GET route to display all the user's reviews in "my kennel"
+router.get("/my-kennel", isLoggedIn, (req, res, next) => {
+  const userId = req.session.currentUser._id;
+
+  User.findById(userId)
+    .populate('reviews')
+    .then(user => {
+      res.render('my-kennel', { reviews: user.reviews });
+    })
+    .catch(error => {
+      next(error);
+    });
+});
+
 
 
 // GET route to display form to add dog to "my kennel"
