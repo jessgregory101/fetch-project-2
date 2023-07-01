@@ -4,7 +4,6 @@ const Schema = mongoose.Schema;
 const apartmentSchema = new Schema ({
     name: {
         type: String,
-        required: true,
         trim: true,
     },
     location: {
