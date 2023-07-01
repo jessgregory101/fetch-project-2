@@ -4,7 +4,7 @@ const router = express.Router();
 const Dog = require("../models/Dog.model"); // Import the Dog model
 const isLoggedIn = require("../middleware/isLoggedIn");
 
-
+const fileUploader = require('../config/cloudinary.config');
 
 // GET route to display the form to edit a specific dog
 router.get("/edit-dog/:dogId", isLoggedIn, (req, res, next) => {
@@ -22,7 +22,14 @@ router.get("/edit-dog/:dogId", isLoggedIn, (req, res, next) => {
 router.post("/edit-dog/:dogId", isLoggedIn, (req, res, next) => {
 
   const { dogId } = req.params;
-  const { name, breed, age, image, character } = req.body;
+  const { name, breed, age, character, existingImage } = req.body;
+
+  let image;
+  if (req.file) {
+    image = req.file.path;
+  } else {
+    image = existingImage;
+  }
   
   Dog.findByIdAndUpdate(dogId, { name, breed, age, image, character })
     .then(() => {
