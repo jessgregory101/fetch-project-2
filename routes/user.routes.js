@@ -30,10 +30,11 @@ router.get("/my-kennel", isLoggedIn, (req, res, next) => {
   User.findById(userId)
     .populate('reviews')
     .then(user => {
-      res.render('my-kennel', { reviews: user.reviews });
+      res.render('my-kennel', { reviews: user.reviews, isLoggedIn: req.session.isLoggedIn });
     })
     .catch(error => {
       next(error);
+
     });
 });
 
