@@ -5,6 +5,8 @@ const User = require("../models/User.model");
 const Dog = require("../models/Dog.model");
 const Review = require("../models/Review.model");
 
+const fileUploader = require('../config/cloudinary.config');
+
 const isLoggedIn = require("../middleware/isLoggedIn");
 
 
@@ -50,8 +52,9 @@ router.get("/add-dog", isLoggedIn, (req, res, next) => {
 // POST route to submit a new dog
 
 router.post("/add-dog", isLoggedIn, (req, res, next) => {
-  const { name, breed, age, image, character } = req.body;
+  const { name, breed, age, character } = req.body;
   const owner = req.session.currentUser._id;
+  const image = req.file.path;
 
   Dog.create({ name, breed, age, image, character, owner })
     .then(dog => {
