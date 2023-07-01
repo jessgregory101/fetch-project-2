@@ -21,6 +21,7 @@ h1 {
 
 body {
   font-family: 'Poppins', sans-serif;
+  background-color: #f9f7f0;
 }
 
 nav {
@@ -61,7 +62,7 @@ nav a {
 }
 
 .button {
-  background-color: #ECECEC;
+  background-color: #E5E4E2;
   border: 1px solid black;
   color: black;
   padding: 6px 12px;
@@ -106,7 +107,7 @@ nav a {
 
 #section-2-container {
   height: 350px;
-  background-color: #ECECEC;
+  background-color: #E5E4E2;
 }
 
 #section-2-text {
