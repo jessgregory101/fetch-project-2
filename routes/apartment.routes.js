@@ -30,5 +30,4 @@ router.get("/apartment-details/:id", (req, res, next) => {
       });
 });
 
-
 module.exports = router;

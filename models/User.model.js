@@ -14,6 +14,7 @@ const userSchema = new Schema ({
         required: true,
     },
     dogs: [{type: mongoose.Schema.Types.ObjectId, ref: 'Dog'}],
+    reviews: [{type: mongoose.Schema.Types.ObjectId, ref: 'Review'}],
     favourites: [{type: mongoose.Schema.Types.ObjectId, ref: 'Apartment'}]
 });
 

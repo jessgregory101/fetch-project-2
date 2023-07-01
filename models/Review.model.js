@@ -1,10 +1,9 @@
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+const { Schema, model } = require("mongoose");
 
 const reviewSchema = new Schema(
   {
-    user: { type: Schema.Types.ObjectId, ref: 'User' },
-    dog: { type: Schema.Types.ObjectId, ref: 'Dog' },
+    user: { type: Schema.Types.ObjectId, ref: 'User', required: true},
+    dog: { type: Schema.Types.ObjectId, ref: 'Dog', required: true},
     rating: { 
       type: Number,
       required: true,
@@ -19,12 +18,13 @@ const reviewSchema = new Schema(
       type: String,
       required: true
     },
-    apartment: { type: Schema.Types.ObjectId, ref: 'Apartment' }
+    apartment: { type: Schema.Types.ObjectId, ref: 'Apartment', required: true }
   },
   {
     timestamps: true
   }
 );
 
-const Review = mongoose.model("Review", reviewSchema);
+const Review = model("Review", reviewSchema);
+
 module.exports = Review;
