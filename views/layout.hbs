@@ -6,20 +6,27 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>{{appTitle}}</title>
   <link rel="stylesheet" href="/stylesheets/style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+
 </head>
 
 <body>
 
-  <nav>
-    <div class="nav-left">
-      <a href="/">FETCH</a>
-    </div>
-    <div class="nav-right">
-      <a href="/my-kennel">My Kennel</a>
-      <a href="/apartment-listings">Apartments</a>
-      <a href="/auth/login">Log In</a>
-    </div>
-  </nav>
+<nav class="navbar">
+  <div class="nav-left">
+    <a href="/">FETCH</a>
+  </div>
+  <div class="nav-right">
+    <a href="/my-kennel">My Kennel</a>
+    <a href="/apartments">Apartments</a>
+    {{#if isLoggedIn}}
+      <a href="/auth/logout" class="button">Log Out</a>
+    {{else}}
+      <a href="/auth/login" class="button">Log In</a>
+    {{/if}}
+  </div>
+</nav>
+
 
   {{{body}}}
 

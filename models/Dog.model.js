@@ -14,7 +14,7 @@ const dogSchema = new Schema(
         },
         age: { 
             type: String, 
-            enum: ['puppy', 'teen', 'mature', 'retired'], 
+            enum: ['Puppy', 'Teen', 'Mature', 'Retired'], 
             required: true 
         },
         image: { 
@@ -23,7 +23,7 @@ const dogSchema = new Schema(
         },
         character: [{
             type: String,
-            enum: ['energetic', 'friendly', 'quiet', 'playful', 'affectionate', 'shy'], 
+            enum: ['Energetic', 'Friendly', 'Quiet', 'Playful', 'Affectionate', 'Shy'], 
             required: true 
         }],
         owner: { type: Schema.Types.ObjectId, ref: 'User', required: true }
