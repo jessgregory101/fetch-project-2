@@ -1,11 +1,10 @@
 <h1>Leave Review</h1>
 
-<form action="/leave-review/{{apartment._id}}" method="post">
-
+<form action="/leave-review" method="post">
     <label for="dog">Select your pup:</label>
     <select name="dog" id="dog">
         {{#each dogs}}
-        <option value="{{_id}}">{{name}}</option>
+        <option value="{{this._id}}">{{this.name}}</option>
         {{/each}}
     </select>
 
@@ -18,5 +17,10 @@
     <label for="rating">How would you rate your stay here?</label>
     <input type="number" id="rating" name="rating" required min="1" max="5">
 
-    <input type="submit" value="Add Rating">
+    <input type="hidden" name="apartmentId" value="{{apartmentId}}">
+
+    <input type="hidden" name="userId" value="{{userId}}">
+
+
+    <input type="submit" value="Add Review">
 </form>

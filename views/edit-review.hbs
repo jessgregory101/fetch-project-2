@@ -1,0 +1,30 @@
+<h1>Edit Review</h1>
+
+<form action="/edit-review/{{review._id}}" method="post">
+    <label for="dog">Select your pup:</label>
+
+    <select name="dog" id="dog">
+        {{#each dogs}}
+        <option value="{{this._id}}">{{this.name}}</option>
+        {{/each}}
+    </select>
+
+
+  <label>Pros:
+    <input type="text" name="pros" value="{{review.pros}}" />
+  </label>
+
+  <label>Cons:
+    <input type="text" name="cons" value="{{review.cons}}" />
+  </label>
+
+  <label>How would you rate your stay here?
+    <input type="number" name="rating" value="{{review.rating}}" required min="1" max="5" />
+  </label>
+
+    <input type="hidden" name="apartmentId" value="{{apartmentId}}">
+    <input type="hidden" name="userId" value="{{userId}}">
+
+    <input type="submit" value="Save">
+</form>
+

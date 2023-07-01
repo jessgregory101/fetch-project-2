@@ -11,30 +11,17 @@ const isLoggedIn = require("../middleware/isLoggedIn");
 // GET route to display all the user's dogs in "my kennel"
 
 router.get("/my-kennel", isLoggedIn, (req, res, next) => {
-    const userId = req.session.currentUser._id;
-  
-    User.findById(userId)
-      .populate('dogs')
-      .then(user => {
-        res.render('my-kennel', { dogs: user.dogs, isLoggedIn: req.session.isLoggedIn });
-      })
-      .catch(error => {
-        next(error);
-      });
-});
-
-// GET route to display all the user's reviews in "my kennel"
-router.get("/my-kennel", isLoggedIn, (req, res, next) => {
   const userId = req.session.currentUser._id;
 
-  User.findById(userId)
-    .populate('reviews')
-    .then(user => {
-      res.render('my-kennel', { reviews: user.reviews, isLoggedIn: req.session.isLoggedIn });
+  const fetchDogs = User.findById(userId).populate('dogs');
+  const fetchReviews = Review.find({});
+
+  Promise.all([fetchDogs, fetchReviews])
+    .then(([user, reviews]) => {
+      res.render('my-kennel', { dogs: user.dogs, reviews, isLoggedIn: req.session.isLoggedIn });
     })
     .catch(error => {
       next(error);
-
     });
 });
 
