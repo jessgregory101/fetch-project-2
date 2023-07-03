@@ -10,7 +10,7 @@ const fileUploader = require('../config/cloudinary.config');
 const isLoggedIn = require("../middleware/isLoggedIn");
 
 
-// GET route to display all the user's dogs in "my kennel"
+// GET route to display all the user's dogs and reviews in "my kennel"
 
 router.get("/my-kennel", isLoggedIn, (req, res, next) => {
   const userId = req.session.currentUser._id;

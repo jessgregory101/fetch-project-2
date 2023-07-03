@@ -14,3 +14,9 @@
 <p>{{apartment.description}}</p>
 
 <a href="/leave-review/{{apartment._id}}">Leave a review</a>
+
+<div class="review-container">
+    {{#each reviews}}
+        {{> reviewCard}}
+    {{/each}}
+</div>

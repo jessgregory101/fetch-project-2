@@ -39,13 +39,11 @@ nav a {
   text-decoration: none;
 }
 
-.nav-left {
-  color: black;
-  margin-right: 15px;
-  font-weight: 700;
-  font-size: 20px;
-  text-decoration: none;
+.nav-left img {
+  width: 200px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
 }
+
 
 .nav-right {
   color: black;
@@ -56,13 +54,20 @@ nav a {
 }
 
 .navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #ffffff;
   border-bottom: 1px solid lightgray;
-  width: 95%;
-  margin: auto;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
 }
 
 .button {
-  background-color: #E5E4E2;
+  background-color: #ffffff; /* Update this value to match the background color */
   border: 1px solid black;
   color: black;
   padding: 6px 12px;
@@ -74,6 +79,13 @@ nav a {
   border-radius: 10px;
 }
 
+.button:hover {
+  background-color: #222;
+  color: white;
+}
+
+
+
 /* index view section 1 */
 
 #slogan {
@@ -84,7 +96,7 @@ nav a {
 #section-1-container {
   display: flex;
   flex-direction: row;
-  margin: 80px;
+  margin: 200px 80px 100px; /* Adjust the margin values to control the spacing */
   justify-content: center;
   align-items: center;
 }
@@ -94,10 +106,13 @@ nav a {
   margin-right: 75px;
 }
 
+
 #index-hero {
   width: 500px;
   border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+  
 
 #index-section-1 {
   margin-bottom: 20px;
@@ -107,13 +122,18 @@ nav a {
 
 #section-2-container {
   height: 350px;
-  background-color: #E5E4E2;
+  background-color: #ffff; /* Set background color for the area outside the container */
+  padding: 10px; /* Add padding to create space between the container and the surrounding area */
+  margin: 20px 0; /* Add margin to create equal space between the top and bottom of the container */
 }
 
 #section-2-text {
-  font-size: 20px;
+  font-size: 28px;
+  font-weight: bold;
   text-align: center;
   padding: 40px;
+  margin: 0 300px; /* Add margin on both sides */
+  white-space: normal; /* Allow text to wrap onto multiple lines */
 }
 
 .section-2-images {
@@ -125,12 +145,23 @@ nav a {
   display: flex;
   justify-content: center;
   flex-direction: row;
+  background-color: #ffc5b9; /* Set background color for the image container */
+  padding: 20px; /* Add padding to create space between the images and the container */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow to the image container */
+  margin-left: 100px; /* Increase the left margin to make the container narrower */
+  margin-right: 100px; /* Increase the right margin to make the container narrower */
+  border-radius: 20px; /* Add border-radius to round the corners */
 }
 
 .trusted-dogs {
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: transform 0.2s ease-in-out; /* Add transition for smooth animation */
+}
+
+.trusted-dogs:hover {
+  transform: scale(1.15); 
 }
 
 
