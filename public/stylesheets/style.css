@@ -431,6 +431,13 @@ h2 {
   justify-content: space-between;
   align-items: center;
 }
+
+/* apartment details */
+
+
+
+
+
 /* leave review */
 
 /* .review-form {
@@ -475,7 +482,7 @@ h2 {
 
 /* add form (dog and review) */
 
-h4 {
+h6 {
   font-size: 30px;
   font-weight: bold;
   text-align: center;
