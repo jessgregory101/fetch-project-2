@@ -38,7 +38,7 @@ router.get("/add-dog", isLoggedIn, (req, res, next) => {
 
 // POST route to submit a new dog
 
-router.post("/add-dog", isLoggedIn, (req, res, next) => {
+router.post("/add-dog", isLoggedIn, fileUploader.single('image'), (req, res, next) => {
   const { name, breed, age, character } = req.body;
   const owner = req.session.currentUser._id;
   const image = req.file.path;
