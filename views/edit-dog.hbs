@@ -1,6 +1,6 @@
 <h2>Edit {{dog.name}}'s Profile</h2>
 
-<form action="/edit-dog/{{dog._id}}" method="post">
+<form action="/edit-dog/{{dog._id}}" method="post" enctype="multipart/form-data">
   <label>Name:
     <input type="text" name="name" value="{{dog.name}}" />
   </label>

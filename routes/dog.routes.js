@@ -19,7 +19,7 @@ router.get("/edit-dog/:dogId", isLoggedIn, (req, res, next) => {
 
 
 // POST route to submit the form when dog is edited
-router.post("/edit-dog/:dogId", isLoggedIn, (req, res, next) => {
+router.post("/edit-dog/:dogId", isLoggedIn, fileUploader.single('image'), (req, res, next) => {
 
   const { dogId } = req.params;
   const { name, breed, age, character, existingImage } = req.body;
