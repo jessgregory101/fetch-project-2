@@ -39,12 +39,10 @@ nav a {
   text-decoration: none;
 }
 
-.nav-left {
-  color: black;
-  margin-right: 15px;
-  font-weight: 700;
-  font-size: 20px;
-  text-decoration: none;
+.logo {
+  width: 200px;
+  height: auto;
+  margin-left: 30px; /* Add left margin to create space */
 }
 
 .nav-right {
@@ -56,13 +54,16 @@ nav a {
 }
 
 .navbar {
-  border-bottom: 1px solid lightgray;
-  width: 95%;
-  margin: auto;
+  background-color: white; /* Set background color to white */
+  height: 90px; /* Adjust the height to your desired value */
+  margin: 0;
+  padding: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add box shadow */
+  border: none; /* Remove the border */
 }
 
 .button {
-  background-color: #E5E4E2;
+  background-color: #ffffff; /* Update this value to match the background color */
   border: 1px solid black;
   color: black;
   padding: 6px 12px;
@@ -74,50 +75,75 @@ nav a {
   border-radius: 10px;
 }
 
+.button:hover {
+  background-color: #222;
+  color: white;
+}
+
+
+
 /* index view section 1 */
 
 #slogan {
-  font-size: 60px;
+  font-size: 45px;
   margin-bottom: 10px;
+  line-height: 1.2; 
+  font-weight: bold; /* Set the font weight to bold */
 }
 
 #section-1-container {
   display: flex;
   flex-direction: row;
-  margin: 80px;
+  margin: 100px 80px; 
   justify-content: center;
   align-items: center;
 }
 
 #section-1-left {
-  width: 500px;
+  width: 700px;
   margin-right: 75px;
 }
+
 
 #index-hero {
   width: 500px;
   border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+  
 
 #index-section-1 {
   margin-bottom: 20px;
+  font-size: 25px;
 }
+
+.sign-up-button {
+  font-size: 18px;
+  padding: 10px 20px;
+}
+
 
 /* index view section 2 */
 
 #section-2-container {
   height: 350px;
-  background-color: #E5E4E2;
+  background-color: #ffc5b9;
+  padding: 10px;
+  margin: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add box shadow */
 }
 
 #section-2-text {
-  font-size: 20px;
+  font-size: 30px;
+  font-weight: bold;
   text-align: center;
-  padding: 40px;
+  padding-top: 40px;
+  margin: 0 300px; /* Add margin on both sides */
+  white-space: normal; /* Allow text to wrap onto multiple lines */
 }
 
 .section-2-images {
-  width: 150px;
+  width: 180px;
   padding: 20px;
 }
 
@@ -126,12 +152,193 @@ nav a {
   justify-content: center;
   flex-direction: row;
 }
+  /* background-color: #f9f7f0;  */
+  /* padding: 20px; Add padding to create space between the images and the container */
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); Add box shadow to the image container */
+  /* margin-left: 100px; Increase the left margin to make the container narrower */
+  /* margin-right: 100px; Increase the right margin to make the container narrower */
+  /* border-radius: 20px; Add border-radius to round the corners */
+
 
 .trusted-dogs {
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: transform 0.2s ease-in-out; /* Add transition for smooth animation */
 }
+
+.trusted-dogs:hover {
+  transform: scale(1.15); 
+}
+
+/* SECTION 3 */
+
+#section-3-header {
+  font-size: 40px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  font-weight: bold;
+}
+
+#section-3-container {
+  display: flex;
+  flex-direction: row;
+  margin: 100px 80px;
+  justify-content: center;
+  align-items: center;
+}
+
+#section-3-left {
+  width: 500px;
+  margin-right: 75px;
+}
+
+#section-3-right {
+  width: 500px;
+}
+
+#index-hero {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+  
+#index-section-3 {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.apartment-button {
+  font-size: 18px;
+  padding: 10px 20px;
+}
+
+/* SECTION 4 */
+
+#section-4-container {
+  margin-top: 100px;
+  text-align: center;
+  background-color: #ffc5b9;
+  padding: 40px 80px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add box shadow */
+}
+
+#section-4-text {
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-left: 200px; 
+  margin-right: 200px;
+}
+
+#image-container-4 {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.review-dogs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 100px; 
+  margin-right: 100px;
+}
+
+.section-4-images {
+  width: 150px;
+  padding: 20px;
+}
+
+#index-section-4 {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.review-example {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.dog-names {
+  font-weight: bold;
+}
+
+
+/* SECTION 5*/
+
+#section-5-container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+  background-color: #f9f7f0;
+  padding: 40px;
+  margin-left: 400px; 
+  margin-right: 400px;
+}
+
+#section-5-header {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.section-5-text {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.sign-up-button {
+  background-color: #ffffff; /* Update this value to match the background color */
+  border: 1px solid black;
+  color: black;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 4px 2px;
+  border-radius: 10px;
+}
+
+.sign-up-button:hover {
+  background-color: #222;
+  color: white;
+}
+
+/* index footer */
+#section-6-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f7f0;
+  padding: 20px;
+}
+
+.left-content {
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo {
+  width: 200px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.created-by {
+  font-size: 14px;
+}
+
+.divider {
+  height: 80%;
+  width: 2px;
+  background-color: #000;
+  margin: 0 20px;
+  display: inline-block;
+}
+
 
 /* auth views */
 
@@ -224,16 +431,109 @@ h2 {
   justify-content: space-between;
   align-items: center;
 }
+/* leave review */
 
+/* .review-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.review-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.review-form label {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.review-form input[type="text"],
+.review-form input[type="number"],
+.review-form select {
+  font-size: 18px;
+  width: 250px;
+  height: 35px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.review-form input[type="submit"] {
+  background-color: #ffffff;
+  border: 1px solid black;
+  color: black;
+  padding: 6px 12px;
+  text-align: center;
+  display: inline-block;
+  font-size: 15px;
+  border-radius: 5px;
+  width: 250px;
+  margin-bottom: 15px;
+} */
+
+/* add form (dog and review) */
+
+h4 {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.add-form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.add-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.add-form input[type="text"],
+.add-form select,
+.add-form input[type="file"] {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+#character {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+}
 #left-flex {
   max-width: 250px;
 }
 
+.add-form input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  margin-top: 20px;
+  background-color: #ffc5b9;
+  color: #000000;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  cursor: pointer;
+}
 #rating {
   font-size: 40px;
   margin-right: 10px;
 }
 
+.add-form input[type="submit"]:hover {
+  background-color: #222;
+  color: #ffffff;
+}
 #five {
   font-size: 20px;
 }
