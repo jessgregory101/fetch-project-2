@@ -438,7 +438,7 @@ h2 {
 
 /* add form (dog and review) */
 
-h4 {
+.form-title {
   font-size: 30px;
   font-weight: bold;
   text-align: center;
