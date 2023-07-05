@@ -41,7 +41,7 @@ router.post("/leave-review", isLoggedIn, (req, res, next) => {
       return User.findByIdAndUpdate(userId, { $push: { reviews: review._id } });
     })
     .then(() => {
-      res.redirect("/my-kennel"); // Replace with the appropriate redirection URL
+      res.redirect("/my-kennel");
     })
     .catch((error) => {
       next(error);
@@ -63,7 +63,6 @@ router.get("/edit-review/:reviewId", isLoggedIn, (req, res, next) => {
           })
           .catch(error => next(error));
       } else {
-        // User is not authorized to edit this review
         res.status(403).send('Unauthorized');
       }
     })
