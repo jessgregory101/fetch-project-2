@@ -3,10 +3,10 @@
 const mongoose = require('mongoose');
 const Apartment = require('../models/Apartment.model');
 
-const DB_NAME = "fetch-project-2";
+const DB_NAME = "mongodb+srv://jessgregoryIronhack:rjcMSWSRyovHLip2@cluster0.9fkdbwa.mongodb.net/?retryWrites=true&w=majority";
 
 mongoose
-  .connect(`mongodb://localhost/${DB_NAME}`, {
+  .connect(DB_NAME, {
   })
   .then(() => {
     console.log('Connected to the database');
