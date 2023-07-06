@@ -1,14 +1,14 @@
 <h1 id="page-title">My Kennel</h1>
-
+<a href="/add-dog" id="add-dog-button">Add a pup</a>
 <div class="dogs-container">
     {{#each dogs}}
         {{> dogCard}}
     {{/each}}
 </div>
 
-<a href="/add-dog">Add a pup</a>
+<h1 id="kennel-review-title">My Reviews</h1>
 
-<div class="review-container">
+<div class="kennel-review-container">
     {{#each reviews}}
         {{> reviewCard}}
     {{/each}}
