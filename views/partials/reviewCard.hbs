@@ -1,16 +1,8 @@
-<div class="kennel-review-card">
-    <div id="kennel-review-text">
-        <h4 id="kennel-review-title">{{this.dog.name}}'s review of {{this.apartment.name}}</h4>
-        <div id="kennel-review-card-container">
-            <p class="kennel-review-para">Rating: {{this.rating}}</p>
-            <p class="kennel-review-para">Pros: {{this.pros}}</p>
-            <p class="kennel-review-para">Cons: {{this.cons}}</p>
-        </div>
+<div class="review-card">
+    <h2>{{this.dog.name}}'s review of {{this.apartment.name}}</h2>
+    <div id="review-contents">
+        <p>Rating: {{this.rating}}</p>
+        <p>Pros: {{this.pros}}</p>
+        <p>Cons: {{this.cons}}</p>
     </div>
-    {{!-- <div id="review-button-container">
-        <a class="button" href="/edit-review/{{_id}}">Edit</a>
-        <form action="/delete-review/{{this._id}}" method="POST">
-            <button id="delete-button" type="submit">Delete</button>
-        </form>
-    </div> --}}
 </div>
