@@ -41,7 +41,7 @@ router.post("/leave-review", isLoggedIn, (req, res, next) => {
       return User.findByIdAndUpdate(userId, { $push: { reviews: review._id } });
     })
     .then(() => {
-      res.redirect("/my-kennel");
+      res.redirect(`/apartment-details/${apartmentId}`);
     })
     .catch((error) => {
       next(error);

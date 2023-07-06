@@ -15,12 +15,16 @@ const isLoggedIn = require("../middleware/isLoggedIn");
 router.get("/my-kennel", isLoggedIn, (req, res, next) => {
   const userId = req.session.currentUser._id;
 
-  const fetchDogs = User.findById(userId).populate('dogs');
-  const fetchReviews = Review.find({});
+  User.findById(userId)
+    .populate('dogs')
+    .then(user => {
 
-  Promise.all([fetchDogs, fetchReviews])
-    .then(([user, reviews]) => {
-      res.render('my-kennel', { dogs: user.dogs, reviews, isLoggedIn: req.session.isLoggedIn });
+      const dogIds = user.dogs.map(dog => dog._id);
+      return Review.find({ dog: { $in: dogIds } })
+        .populate('dog')
+        .then(reviews => {
+          res.render('my-kennel', { dogs: user.dogs, reviews, isLoggedIn: req.session.isLoggedIn });
+        })
     })
     .catch(error => {
       next(error);
