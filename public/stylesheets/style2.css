@@ -1,0 +1,138 @@
+.sub-text {
+  font-size: 13px;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+
+/* my kennel*/
+
+#page-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.dogs-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.dog-card {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.dog-card img {
+  max-width: 150px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+  #dog-text {
+    margin-top: 10px;
+  }
+
+  #dog-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  #dog-card-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Left flex container */
+  #left-flex {
+    flex: 1;
+    text-align: left;
+  }
+
+  /* Dog paragraphs */
+  .dog-para {
+    margin-bottom: 5px;
+    color: #555;
+  }
+
+  .link-container a {
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    font-size: 14px;
+    background-color: #ffc5b9;
+    color: #000000;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .link-container a:hover {
+    background-color: #222;
+    color: #ffffff;
+  }
+  
+
+
+  /* Review container */
+  
+  .review-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .review-card {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .review-card img {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+    #review-text {
+      margin-top: 10px;
+    }
+  
+    #review-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  
+    #review-card-container {
+      display: flex;
+      justify-content: center;
+    }
+  
+    /* Left flex container */
+    #left-flex {
+      flex: 1;
+      text-align: left;
+    }
+  
+    /* Dog paragraphs */
+    .review-para {
+      margin-bottom: 5px;
+      color: #555;
+    }
+

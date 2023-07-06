@@ -436,7 +436,7 @@ h2 {
   font-size: 20px;
 }
 
-/* add form (dog and review) */
+/* add and edit form (dog and review) */
 
 .form-title {
   font-size: 30px;
@@ -449,6 +449,7 @@ h2 {
 .add-form {
   max-width: 400px;
   margin: 0 auto;
+  
 }
 
 .add-form label {
@@ -482,6 +483,7 @@ h2 {
   padding: 10px;
   font-size: 18px;
   margin-top: 20px;
+  margin-bottom: 40px;
   background-color: #ffc5b9;
   color: #000000;
   border: 1px solid #000000;
