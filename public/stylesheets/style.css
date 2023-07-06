@@ -599,3 +599,35 @@ nav a {
   border-radius: 10px;
 }
 
+.checkbox-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 400px;
+}
+
+.checkbox-container label {
+  width: 33%;
+}
+
+#save-changes-button {
+  width: 400px;
+  margin-top: 10px;
+  height: 40px;
+  font-size: 20px;
+  margin-bottom: 80px;
+  background-color: #ffc5b9;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#save-changes-button:hover {
+  background-color: #222;
+  color: white;
+}
+
+
+
+
+
