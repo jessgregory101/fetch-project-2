@@ -50,6 +50,14 @@ router.post("/edit-dog/:dogId", isLoggedIn, fileUploader.single('image'), (req, 
   } else {
     image = existingImage;
   }
+
+  let dogCharacter = [];
+  if(req.body.Energetic) character.push('Energetic');
+  if(req.body.Friendly) character.push('Friendly');
+  if(req.body.Quiet) character.push('Quiet');
+  if(req.body.Playful) character.push('Playful');
+  if(req.body.Affectionate) character.push('Affectionate');
+  if(req.body.Shy) character.push('Shy');
   
   Dog.findByIdAndUpdate(dogId, { name, breed, age, image, character })
     .then(() => {

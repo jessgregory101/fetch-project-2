@@ -59,7 +59,7 @@ router.get("/apartment-details/:id", (req, res, next) => {
     if (reviews.length > 0) {
       avgRating = Math.round(sum / reviews.length * 10) / 10;
     } else {
-      avgRating = "No reviews yet";
+      avgRating = 0;
     }
     res.render('apartment-details', { apartment: apartmentInfo, reviews, isLoggedIn: req.session.isLoggedIn });
   })
