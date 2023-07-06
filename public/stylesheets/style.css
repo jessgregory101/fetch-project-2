@@ -586,4 +586,10 @@ nav a {
   color: #ffffff;
 }
 
+/* edit dog form */
+
+#image-instructions {
+  font-size: 14px;
+  margin-top: 10px;
+}
 
