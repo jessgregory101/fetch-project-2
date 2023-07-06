@@ -28,13 +28,16 @@
       <input type="file" name="image" />
   
     <label></label>
-    <input type="checkbox" name="character" value="Energetic" {{#if characterObj.Energetic}}checked{{/if}}> Energetic
-    <input type="checkbox" name="character" value="Friendly" {{#if characterObj.Friendly}}checked{{/if}}> Friendly
-    <input type="checkbox" name="character" value="Quiet" {{#if characterObj.Quiet}}checked{{/if}}> Quiet
-    <input type="checkbox" name="character" value="Playful" {{#if characterObj.Playful}}checked{{/if}}> Playful
-    <input type="checkbox" name="character" value="Affectionate" {{#if characterObj.Affectionate}}checked{{/if}}> Affectionate
-    <input type="checkbox" name="character" value="Shy" {{#if characterObj.Shy}}checked{{/if}}> Shy
+    <div class="checkbox-container">
+      <label><input type="checkbox" name="character" value="Energetic" {{#if characterObj.Energetic}}checked{{/if}}> Energetic</label>
+      <label><input type="checkbox" name="character" value="Friendly" {{#if characterObj.Friendly}}checked{{/if}}> Friendly</label>
+      <label><input type="checkbox" name="character" value="Quiet" {{#if characterObj.Quiet}}checked{{/if}}> Quiet</label>
+      <label><input type="checkbox" name="character" value="Playful" {{#if characterObj.Playful}}checked{{/if}}> Playful</label>
+      <label><input type="checkbox" name="character" value="Affectionate" {{#if characterObj.Affectionate}}checked{{/if}}> Affectionate</label>
+      <label><input type="checkbox" name="character" value="Shy" {{#if characterObj.Shy}}checked{{/if}}> Shy</label>
+    </div>
   
-    <button class="button" type="submit">Save changes</button>
+    <button id="save-changes-button" type="submit">Save changes</button>
   </form>
 </div>
+
