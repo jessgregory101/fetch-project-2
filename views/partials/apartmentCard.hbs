@@ -1,6 +1,6 @@
 <div class="apartment-card">
     <a href="/apartment-details/{{this._id}}">
-        <img src="{{this.heroImage}}" alt="{{this.name}}">
+        <img id="apartment-hero-img" src="{{this.heroImage}}" alt="{{this.name}}">
     </a>
     <div id="apartment-text">
         <h4 id="apartment-title">{{this.name}}</h4>
@@ -13,7 +13,7 @@
                     {{/each}}
                 </p>
             </div>
-            <span id="rating">{{this.averageRating}}<span id="five">/5</span></span>
+            <span id="rating-review">{{this.averageRating}}<span id="five">/5</span></span>
         </div>
     </div>
 </div>
