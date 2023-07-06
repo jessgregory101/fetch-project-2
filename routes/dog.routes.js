@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const Dog = require("../models/Dog.model"); // Import the Dog model
+const Dog = require("../models/Dog.model");
 const isLoggedIn = require("../middleware/isLoggedIn");
 
 const fileUploader = require('../config/cloudinary.config');
@@ -12,7 +12,27 @@ router.get("/edit-dog/:dogId", isLoggedIn, (req, res, next) => {
 
     Dog.findById(dogId)
     .then(dogToEdit => {
-      res.render('edit-dog', { dog: dogToEdit, isLoggedIn: req.session.isLoggedIn });
+      console.log(dogToEdit.age);
+
+      const characterObj = {
+        Energetic: dogToEdit.character.includes('Energetic') || dogToEdit.character.includes('energetic'),
+        Friendly: dogToEdit.character.includes('Friendly') || dogToEdit.character.includes('friendly'),
+        Quiet: dogToEdit.character.includes('Quiet') || dogToEdit.character.includes('quiet'),
+        Playful: dogToEdit.character.includes('Playful') || dogToEdit.character.includes('playful'),
+        Affectionate: dogToEdit.character.includes('Affectionate') || dogToEdit.character.includes('affectionate'),
+        Shy: dogToEdit.character.includes('Shy') || dogToEdit.character.includes('shy'),
+      };
+      
+      const ageObj = {
+        Puppy: dogToEdit.age === 'Puppy' || dogToEdit.age === 'puppy',
+        Teen: dogToEdit.age === 'Teen' || dogToEdit.age === 'teen',
+        Mature: dogToEdit.age === 'Mature' || dogToEdit.age === 'mature',
+        Retired: dogToEdit.age === 'Retired' || dogToEdit.age === 'retired'
+      };
+
+      console.log(ageObj); 
+
+      res.render('edit-dog', { dog: dogToEdit, characterObj, ageObj, isLoggedIn: req.session.isLoggedIn });
     })
     .catch(error => next(error));
 });

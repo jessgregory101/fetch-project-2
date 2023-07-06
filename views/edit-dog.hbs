@@ -1,42 +1,40 @@
-<p class ="form-title">Edit {{dog.name}}'s Profile</p>
+<h2 class="form-title">Edit {{dog.name}}'s Profile</h2>
 
 <div class="add-form">
-<form action="/edit-dog/{{dog._id}}" method="post" enctype="multipart/form-data">
-  <label>Name:
-    <input type="text" name="name" value="{{dog.name}}" />
-  </label>
-
-  <label>Breed:
-    <input type="text" name="breed" value="{{dog.breed}}" />
-  </label>
-
-  <label>Age:
-    <select name="age">
-      <option value="{{dog.age}}">{{dog.age}}</option>
-      <option value="Puppy">Puppy</option> 
-      <option value="Teen">Teen</option>
-      <option value="Mature">Mature</option>
-      <option value="Retired">Retired</option>
-    </select>
-  </label>
-
-  <label>Current Image:</label>
-  <img src="{{dog.image}}" alt="{{dog.name}}'s Image" width="200px">
-  <input type="hidden" name="existingImage" value="{{dog.image}}" />
-
-  <label>New Image:</label>
-    <input type="file" name="image" />
-    <p class="sub-text">*If you want to keep your current image, no need to choose a new file</p>
-
-  <label>Character:</label>
-  <div id="character">
-        <label><input type="checkbox" name="character" value="Energetic"> Energetic</label>
-        <label><input type="checkbox" name="character" value="Friendly"> Friendly</label>
-        <label><input type="checkbox" name="character" value="Quiet"> Quiet</label>
-        <label><input type="checkbox" name="character" value="Playful"> Playful</label>
-        <label><input type="checkbox" name="character" value="Affectionate"> Affectionate</label>
-        <label><input type="checkbox" name="character" value="Shy"> Shy</label>
-  </div>
-  <input type="submit" value="Save Changes">
-</form>
+  <form action="/edit-dog/{{dog._id}}" method="post" enctype="multipart/form-data">
+    <label>
+      <input type="text" name="name" value="{{dog.name}}" />
+    </label>
+  
+    <label>
+      <input type="text" name="breed" value="{{dog.breed}}" />
+    </label>
+  
+    <label>
+      <select name="age">
+        <option value="Puppy" {{#if ageObj.Puppy}}selected{{/if}}>Puppy</option>
+        <option value="Teen" {{#if ageObj.Teen}}selected{{/if}}>Teen</option>
+        <option value="Mature" {{#if ageObj.Mature}}selected{{/if}}>Mature</option>
+        <option value="Retired" {{#if ageObj.Retired}}selected{{/if}}>Retired</option>
+      </select>
+    </label>
+  
+    <label></label>
+    <img id="dog-image" src="{{dog.image}}" alt="{{dog.name}}'s Image" width="200px">
+    <input type="hidden" name="existingImage" value="{{dog.image}}" />
+    <p id="image-instructions">If you want to keep your current image, no need to choose a new file</p>
+  
+    <label></label>
+      <input type="file" name="image" />
+  
+    <label></label>
+    <input type="checkbox" name="character" value="Energetic" {{#if characterObj.Energetic}}checked{{/if}}> Energetic
+    <input type="checkbox" name="character" value="Friendly" {{#if characterObj.Friendly}}checked{{/if}}> Friendly
+    <input type="checkbox" name="character" value="Quiet" {{#if characterObj.Quiet}}checked{{/if}}> Quiet
+    <input type="checkbox" name="character" value="Playful" {{#if characterObj.Playful}}checked{{/if}}> Playful
+    <input type="checkbox" name="character" value="Affectionate" {{#if characterObj.Affectionate}}checked{{/if}}> Affectionate
+    <input type="checkbox" name="character" value="Shy" {{#if characterObj.Shy}}checked{{/if}}> Shy
+  
+    <button class="button" type="submit">Save changes</button>
+  </form>
 </div>
