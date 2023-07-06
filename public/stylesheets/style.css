@@ -1,16 +1,3 @@
-/* body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-} */
-
-a {
-  color: #00b7ff;
-}
-
-h1 {
-  color: 15px;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -21,6 +8,7 @@ h1 {
 
 body {
   font-family: 'Poppins', sans-serif;
+  background-color: #f9f7f0;
 }
 
 nav {
@@ -38,12 +26,10 @@ nav a {
   text-decoration: none;
 }
 
-.nav-left {
-  color: black;
-  margin-right: 15px;
-  font-weight: 700;
-  font-size: 20px;
-  text-decoration: none;
+.logo {
+  width: 200px;
+  height: auto;
+  margin-left: 30px;
 }
 
 .nav-right {
@@ -55,13 +41,16 @@ nav a {
 }
 
 .navbar {
-  border-bottom: 1px solid lightgray;
-  width: 95%;
-  margin: auto;
+  background-color: #f9f7f0;
+  height: 90px;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border: none;
 }
 
 .button {
-  background-color: #ECECEC;
+  background-color: #f9f7f0;
   border: 1px solid black;
   color: black;
   padding: 6px 12px;
@@ -73,50 +62,73 @@ nav a {
   border-radius: 10px;
 }
 
+.button:hover {
+  background-color: #222;
+  color: white;
+}
+
 /* index view section 1 */
 
 #slogan {
-  font-size: 60px;
+  font-size: 45px;
   margin-bottom: 10px;
+  line-height: 1.2; 
+  font-weight: bold;
 }
 
 #section-1-container {
   display: flex;
   flex-direction: row;
-  margin: 80px;
+  margin: 100px 80px; 
   justify-content: center;
   align-items: center;
 }
 
 #section-1-left {
-  width: 500px;
+  width: 700px;
   margin-right: 75px;
 }
+
 
 #index-hero {
   width: 500px;
   border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+  
 
 #index-section-1 {
   margin-bottom: 20px;
+  font-size: 25px;
 }
+
+.sign-up-button {
+  font-size: 18px;
+  padding: 10px 20px;
+}
+
 
 /* index view section 2 */
 
 #section-2-container {
   height: 350px;
-  background-color: #ECECEC;
+  background-color: #ffc5b9;
+  padding: 10px;
+  margin: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 #section-2-text {
-  font-size: 20px;
+  font-size: 30px;
+  font-weight: bold;
   text-align: center;
-  padding: 40px;
+  padding-top: 40px;
+  margin: 0 300px;
+  white-space: normal;
 }
 
 .section-2-images {
-  width: 150px;
+  width: 180px;
   padding: 20px;
 }
 
@@ -126,11 +138,495 @@ nav a {
   flex-direction: row;
 }
 
+
 .trusted-dogs {
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: transform 0.2s ease-in-out;
 }
+
+.trusted-dogs:hover {
+  transform: scale(1.15); 
+}
+
+/* SECTION 3 */
+
+#section-3-header {
+  font-size: 40px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  font-weight: bold;
+}
+
+#section-3-container {
+  display: flex;
+  flex-direction: row;
+  margin: 100px 80px;
+  justify-content: center;
+  align-items: center;
+}
+
+#section-3-left {
+  width: 500px;
+  margin-right: 75px;
+}
+
+#section-3-right {
+  width: 500px;
+}
+
+#index-hero {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+  
+#index-section-3 {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.apartment-button {
+  font-size: 18px;
+  padding: 10px 20px;
+}
+
+/* SECTION 4 */
+
+#section-4-container {
+  margin-top: 100px;
+  text-align: center;
+  background-color: #ffc5b9;
+  padding: 40px 80px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#section-4-text {
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-left: 200px; 
+  margin-right: 200px;
+}
+
+#image-container-4 {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.review-dogs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 100px; 
+  margin-right: 100px;
+}
+
+.section-4-images {
+  width: 150px;
+  padding: 20px;
+}
+
+#index-section-4 {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.review-example {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.dog-names {
+  font-weight: bold;
+}
+
+
+/* SECTION 5*/
+
+#section-5-container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+  background-color: #f9f7f0;
+  padding-bottom: 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#section-5-header {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.section-5-text {
+  font-size: 20px;
+  margin: 0 auto 20px auto;
+  max-width: 600px;
+}
+
+.sign-up-button {
+  background-color: #f9f7f0;
+  border: 1px solid black;
+  color: black;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 4px 2px;
+  border-radius: 10px;
+}
+
+.sign-up-button:hover {
+  background-color: #222;
+  color: white;
+}
+
+/* index footer */
+
+#section-6-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f7f0;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.left-content {
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo {
+  width: 200px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.created-by {
+  font-size: 14px;
+}
+
+.divider {
+  height: 80%;
+  width: 2px;
+  background-color: #000;
+  margin: 0 20px;
+  display: inline-block;
+}
+
+
+/* auth views */
+
+.auth-h2 {
+  font-size: 40px;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.auth-forms {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.email input, .password input {
+  font-size: 18px;
+  width: 250px;
+  height: 35px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.auth-buttons {
+  background-color: #E5E4E2;
+  border: 1px solid black;
+  color: black;
+  padding: 6px 12px;
+  text-align: center;
+  display: inline-block;
+  font-size: 15px;
+  border-radius: 5px;
+  width: 250px;
+  margin-bottom: 15px
+}
+
+.error {
+  max-width: 250px;
+  text-align: center;
+}
+
+/* apartments view */
+
+#apartment-title {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.apartments-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 auto;
+  max-width: 1250px;
+  margin-top: 20px;
+}
+
+.apartment-card {
+  max-width: 400px;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+.apartment-card img {
+  max-width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+#apartment-text {
+  background-color: #E5E4E2; 
+  height: 120px;
+  padding: 10px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.apartment-para {
+  font-size: 14px;
+  margin: 0;
+}
+
+#card-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#five {
+  font-size: 20px;
+}
+
+#apartment-hero-img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+/* apartment details */
+
+#details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%; 
+  max-width: 800px; 
+  margin: 0 auto;
+}
+
+.apartment-img-container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.apartment-image-left {
+  height: 550px;
+  border-radius: 20px;
+}
+
+.apartment-images {
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+  border-radius: 20px;
+}
+
+#apartment-details-name {
+  font-size: 20px;
+}
+
+#details-text-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 1800px;
+  background-color: #E5E4E2;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 60px;
+}
+
+#details-left {
+  width: 400px;
+}
+
+#details-right {
+  width: 400px;
+}
+
+#apartment-description {
+  margin-bottom: 10px;
+}
+
+.review-card {
+  max-width: 1200px;
+  background-color: #ffc5b9;
+  padding: 20px;
+  border-radius: 15px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  max-width: 840px;
+}
+
+#review-contents {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#review-button-container {
+  display: flex;
+  flex-direction: row;
+}
+
+#delete-button {
+  background-color: #f9f7f0;
+  border: 1px solid black;
+  color: black;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 4px 2px;
+  height: 40px;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+#delete-button:hover {
+  background-color: #222;
+  color: white;
+}
+
+/* add form (dog and review) */
+
+.form-title {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.add-form {
+  max-width: 400px;
+  margin: 0 auto;
+  
+}
+
+.add-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.add-form input[type="text"],
+.add-form select,
+.add-form input[type="file"] {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+#character {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+}
+#left-flex {
+  max-width: 250px;
+}
+
+.add-form input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  background-color: #ffc5b9;
+  color: #000000;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#rating-review {
+  font-size: 40px;
+  margin-right: 10px;
+}
+
+.add-form input[type="submit"]:hover {
+  background-color: #222;
+  color: #ffffff;
+}
+
+/* edit dog form */
+
+#image-instructions {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+#dog-image {
+  border-radius: 10px;
+}
+
+.checkbox-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 400px;
+}
+
+.checkbox-container label {
+  width: 33%;
+}
+
+#save-changes-button {
+  width: 400px;
+  margin-top: 10px;
+  height: 40px;
+  font-size: 20px;
+  margin-bottom: 80px;
+  background-color: #ffc5b9;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#save-changes-button:hover {
+  background-color: #222;
+  color: white;
+}
+
 
 
 

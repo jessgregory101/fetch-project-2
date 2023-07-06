@@ -2,7 +2,6 @@ const { Schema, model } = require("mongoose");
 
 const reviewSchema = new Schema(
   {
-    user: { type: Schema.Types.ObjectId, ref: 'User', required: true},
     dog: { type: Schema.Types.ObjectId, ref: 'Dog', required: true},
     rating: { 
       type: Number,
@@ -18,7 +17,8 @@ const reviewSchema = new Schema(
       type: String,
       required: true
     },
-    apartment: { type: Schema.Types.ObjectId, ref: 'Apartment', required: true }
+    apartment: { type: Schema.Types.ObjectId, ref: 'Apartment', required: true },
+    user: { type: Schema.Types.ObjectId, ref: 'User', required: true }
   },
   {
     timestamps: true
@@ -28,3 +28,4 @@ const reviewSchema = new Schema(
 const Review = model("Review", reviewSchema);
 
 module.exports = Review;
+

@@ -1,16 +1,31 @@
-<h2>{{this.name}}</h2>
-<div class="apartment-images">
-    <img src="{{apartment.heroImage}}" alt="{{apartment.name}}">
-    <img src="{{apartment.secondImage}}" alt="{{apartment.name}}">
-    <img src="{{apartment.thirdImage}}" alt="{{apartment.name}}">
+<div id="details-container">
+    <div class="apartment-img-container">
+        <img class="apartment-image-left" src="{{apartment.heroImage}}" alt="{{apartment.name}}">
+        <div id="right-side-apartImg">
+            <img class="apartment-images" src="{{apartment.secondImage}}" alt="{{apartment.name}}">
+            <img class="apartment-images" src="{{apartment.thirdImage}}" alt="{{apartment.name}}">
+        </div>
+    </div>
+    <div id="details-text-container">
+        <div id="details-left">
+            <h2 id="apartment-details-name">{{apartment.name}}</h2>
+            <p>Price: {{apartment.price}}</p>
+            <p>Features:
+                {{#each apartment.dogFeatures}}
+                {{this}}{{#unless @last}},{{/unless}}
+                {{/each}}
+            </p>
+            <span id="rating-review">{{apartment.averageRating}}<span id="five">/5</span></span>
+        </div>
+        <div id="details-right">
+            <p id="apartment-description">{{apartment.description}}</p>
+            <a class="button" href="/leave-review/{{apartment._id}}">Leave a review</a>
+        </div>
+    </div>
 </div>
-<p>Price: {{apartment.price}}</p>
-<p>Features:
-    {{#each apartment.dogFeatures}}
-    {{this}}{{#unless @last}},{{/unless}}
-    {{/each}}
-</p>
-<p>{{apartment.averageRating}}</p>
-<p>{{apartment.description}}</p>
 
-<a href="/leave-review/{{apartment._id}}">Leave a review</a>
+<div class="review-container">
+    {{#each reviews}}
+        {{> reviewCard}}
+    {{/each}}
+</div>

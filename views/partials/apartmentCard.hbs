@@ -1,0 +1,19 @@
+<div class="apartment-card">
+    <a href="/apartment-details/{{this._id}}">
+        <img id="apartment-hero-img" src="{{this.heroImage}}" alt="{{this.name}}">
+    </a>
+    <div id="apartment-text">
+        <h4 id="apartment-title">{{this.name}}</h4>
+        <div id="card-container">
+            <div id="left-flex">
+                <p class="apartment-para">Price: {{this.price}}</p>
+                <p class="apartment-para">Features:
+                    {{#each this.dogFeatures}}
+                        {{this}}{{#unless @last}},{{/unless}}
+                    {{/each}}
+                </p>
+            </div>
+            <span id="rating-review">{{this.averageRating}}<span id="five">/5</span></span>
+        </div>
+    </div>
+</div>
