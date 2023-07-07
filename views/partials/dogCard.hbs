@@ -1,21 +1,26 @@
-<div class="dog-card">
-    <img src="{{this.image}}" alt="{{this.name}}">
-    <div id="dog-text"> 
-        <h4 id="dog-title">{{this.name}}</h4>
-        <div id="dog-card-container">
+<div class="dog-card-container">
+    <div class="dog-card">
+        <img src="{{this.image}}" alt="{{this.name}}">
+        <div class="dog-text">
+            <h4 id="dog-title">{{this.name}}</h4>
+            <div>
                 <p class="dog-para">Breed: {{this.breed}}</p>
                 <p class="dog-para">Age: {{this.age}}</p>
-                <p class="dog-para">Character: 
+                <p class="dog-para">Character:
                     {{#each this.character}}
                     {{this}}{{#unless @last}},{{/unless}}
                     {{/each}}
                 </p>
                 <div class="link-container">
-                    <a href="/edit-dog/{{_id}}">Edit</a>
+                    <a class="edit-button" href="/edit-dog/{{_id}}">Edit</a>
                     <form action="/delete-dog/{{this._id}}" method="POST">
-                        <button type="submit">Delete</button>
+                        <button id="delete-dog-button" type="submit">Delete</button>
                     </form>
                 </div>
+            </div>
         </div>
     </div>
 </div>
+
+
+
