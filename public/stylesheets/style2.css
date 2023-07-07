@@ -7,7 +7,6 @@
 
 /* my kennel*/
 #add-dog-button {
-  width: 100%;
   padding: 10px;
   font-size: 18px;
   margin-top: 20px;
@@ -16,9 +15,17 @@
   color: #000000;
   border: 1px solid #000000;
   cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 200px;
+  border-radius: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#add-dog-button:hover {
+  background-color: #222;
+  color: white;
 }
 
 #page-title {
@@ -30,40 +37,39 @@
   text-align: center;
 }
 
+.dog-card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
 .dog-card {
-  max-width: 400px;
+  width: 400px;
   margin-bottom: 20px;
   padding: 15px;
 }
 
-.dogs-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin: 0 auto;
-  max-width: 1250px;
-  margin-top: 20px;
-}
-
 .dog-card img {
-  width: 400px;
+  width: 100%;
   height: 300px;
   object-fit: cover;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
 
-#dog-text {
+.dog-text {
   background-color: #E5E4E2;
   height: auto;
-  padding: 10px;
+  padding: 15px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
 
 .dog-para {
   margin-bottom: 14px;
-  margin: 0;
 }
 
 #dog-title {
@@ -72,32 +78,52 @@
   margin-bottom: 10px;
 }
 
-#dog-card-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+#delete-dog-button {
+  background-color: #f9f7f0;
+  border: 1px solid black;
+  color: black;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  height: 35px;
+  border-radius: 10px;
+  margin-left: 10px;
+  cursor: pointer;
 }
 
+.edit-button {
+  background-color: #f9f7f0;
+  border: 1px solid black;
+  color: black;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  height: 35px;
+  border-radius: 10px;
+  cursor: pointer;
+}
 
+#delete-dog-button:hover {
+  background-color: #222;
+  color: white;
+}
 
-  /* .link-container a {
-    display: inline-block;
-    padding: 10px;
-    margin-top: 10px;
-    width: 100%;
-    font-size: 14px;
-    background-color: #ffc5b9;
-    color: #000000;
-    border: 1px solid #000000;
-    border-radius: 4px;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  .link-container a:hover {
-    background-color: #222;
-    color: #ffffff;
-  }
-  */
+.edit-button:hover {
+  background-color: #222;
+  color: white;
+}
+
+.link-container {
+  display: flex;
+  flex-direction: row;
+}
+
+#kennel-review-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
 
