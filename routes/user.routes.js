@@ -22,6 +22,7 @@ router.get("/my-kennel", isLoggedIn, (req, res, next) => {
       const dogIds = user.dogs.map(dog => dog._id);
       return Review.find({ dog: { $in: dogIds } })
         .populate('dog')
+        .populate('apartment') 
         .then(reviews => {
           res.render('my-kennel', { dogs: user.dogs, reviews, isLoggedIn: req.session.isLoggedIn });
         })
