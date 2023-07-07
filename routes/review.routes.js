@@ -14,7 +14,7 @@ router.get("/leave-review/:apartmentId", isLoggedIn, (req, res, next) => {
   const { apartmentId } = req.params;
   const userId = req.session.currentUser._id;
 
-  Dog.find({}, 'name')
+  Dog.find({ owner: userId }, 'name')
     .then((dogs) => {
       res.render("leave-review", {
         isLoggedIn: req.session.isLoggedIn,
