@@ -52,8 +52,8 @@ router.get("/apartment-details/:id", (req, res, next) => {
   })
   .then(reviews => {
     let sum = 0;
-    for (let review of reviews) {
-      sum += review.rating;
+    for (let i = 0; i < reviews.length; i++) {
+      sum += reviews[i].rating;
     }
     let avgRating;
     if (reviews.length > 0) {
